@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.7;
 
-import "https://github.com/nibbstack/erc721/blob/master/src/contracts/tokens/nf-token-metadata.sol";
-import "https://github.com/nibbstack/erc721/blob/master/src/contracts/ownership/ownable.sol";
+import "@openzeppelin/contracts/token/ERC721/ERC721Full.sol";
+import "@openzeppelin/contracts/drafts/Counters.sol";
 
 contract NewNFT is NFTokenMetadata, Ownable {
 
@@ -16,4 +16,6 @@ contract NewNFT is NFTokenMetadata, Ownable {
         super._mint(_to, _tokenId);
         super._setTokenUri(_tokenId, _uri);
     }
+
+
 }
