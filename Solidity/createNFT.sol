@@ -30,10 +30,11 @@ contract NewBirthdayCard is NFTokenMetadata, Ownable {
         uint256 latestId = _tokenIds.current();
 
         //TokenIdを入れる配列
+        uint256[] all_token;
 
         for (uint i = 1; i < latestId; i++) {
-            if(== _owner){
-                
+            if(ownerOf(i)== _owner){
+
             }
 
         }
