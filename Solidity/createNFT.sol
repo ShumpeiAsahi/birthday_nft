@@ -37,7 +37,7 @@ contract BirthdayCard is ERC721URIStorage, Ownable {
         for (uint i = 1; i <= latestId; i++) {
             
             if(ownerOf(i)== _owner){
-                all_token[num] = i;
+                all_token[index_num] = i;
                 index_num++;
             }
         }
