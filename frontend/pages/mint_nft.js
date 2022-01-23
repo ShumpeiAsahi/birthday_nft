@@ -13,6 +13,11 @@ export default function Mint() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
+      <main className='flex justify-center p-3'>
+        <button className="bg-transparent hover:bg-orange-600 text-orange-500 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">
+          NFTを発行する
+        </button>
+      </main>
       <Footer />
     </div>
     </>
