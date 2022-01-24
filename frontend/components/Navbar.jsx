@@ -47,7 +47,7 @@ export const Navbar = () => {
         {/*Note that in this div we will use a ternary operator to decide whether or not to display the content of the div  */}
         <div
           className={`${
-            active ? '' : 'hidden'
+            active ? '' : 'hidden' 
           }   w-full lg:inline-flex lg:flex-grow lg:w-auto`}
         >
           <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
@@ -77,3 +77,5 @@ export const Navbar = () => {
     </>
   );
 };
+
+//?はif文 activeであれば、'',そうでなければ'hidden'にする
