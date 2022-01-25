@@ -27,6 +27,16 @@ export default function Mint() {
     }
   }
 
+  const mintNFT = async () => {
+    const web3 = new Web3(window.ethereum);
+    await window.ethereum.enable();
+    contract_abi = '';
+    contract_address = '';
+    const NameContract = web3.eth.Contract(contract_abi, contract_address);
+    //NameContract.methods.getName().call();
+    NameContract.methods.setName("bitsofcode").send();
+  }
+
   return (
     <>
     <div>
