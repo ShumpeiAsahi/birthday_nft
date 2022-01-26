@@ -20,6 +20,7 @@ export default function Mint() {
       } else {
         let wallet = accounts[0];
         setWalletAddress(wallet);
+        mintNFT();
       }
     } else {
       // Show alert if Ethereum provider is not detected
@@ -31,7 +32,7 @@ export default function Mint() {
     const web3 = new Web3(window.ethereum);
     await window.ethereum.enable();
     contract_abi = '';
-    contract_address = '';
+    contract_address = '0xdab6dAC596529D64e015EFb40f51aaf5eF5f38Ee';
     const NameContract = web3.eth.Contract(contract_abi, contract_address);
     //NameContract.methods.getName().call();
     NameContract.methods.setName("bitsofcode").send();
