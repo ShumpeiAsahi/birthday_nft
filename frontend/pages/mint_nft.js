@@ -4,6 +4,7 @@ import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import Web3 from 'react';
 
 export default function Mint() {
   
@@ -29,9 +30,11 @@ export default function Mint() {
   }
 
   const mintNFT = async () => {
+    const Web3 = require('web3');
     const web3 = new Web3(window.ethereum);
     await window.ethereum.enable();
-    contract_abi = '';
+    //abi_file = require('../../../abi/abi.json');
+    contract_abi = require('../../../abi/abi.json');
     contract_address = '0xdab6dAC596529D64e015EFb40f51aaf5eF5f38Ee';
     const NameContract = web3.eth.Contract(contract_abi, contract_address);
     //NameContract.methods.getName().call();
