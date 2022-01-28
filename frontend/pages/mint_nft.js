@@ -37,7 +37,6 @@ export default function Mint() {
     contract_abi = require('../../../abi/abi.json');
     contract_address = '0xdab6dAC596529D64e015EFb40f51aaf5eF5f38Ee';
     const NameContract = web3.eth.Contract(contract_abi, contract_address);
-    //NameContract.methods.getName().call();
     NameContract.methods.setName("bitsofcode").send();
   }
 
