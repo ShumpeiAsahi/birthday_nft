@@ -33,11 +33,10 @@ export default function Mint() {
     const Web3 = require('web3');
     const web3 = new Web3(window.ethereum);
     await window.ethereum.enable();
-    //abi_file = require('../../../abi/abi.json');
-    contract_abi = require('../../../abi/abi.json');
-    contract_address = '0xdab6dAC596529D64e015EFb40f51aaf5eF5f38Ee';
-    const NameContract = web3.eth.Contract(contract_abi, contract_address);
-    NameContract.methods.setName("bitsofcode").send();
+    const contract_abi = require('../../../abi/abi.json');
+    const contract_address = '0xdab6dAC596529D64e015EFb40f51aaf5eF5f38Ee';
+    const MintContract = new web3.eth.Contract(contract_abi, contract_address);
+    MintContract.methods.mintBirthCard("0xC81D5a4c75636F05F559a0e7bA4ca643D94858ed","ipfs://QmPpjH7tRQU5gwiu7NJYz862E8cBF4ZhKDWRbiWf4nYmT4").send();
   }
 
   return (
