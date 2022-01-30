@@ -24,7 +24,6 @@ export default function Mint() {
         mintNFT();
       }
     } else {
-      // Show alert if Ethereum provider is not detected
       alert("Please install Mask");
     }
   }
