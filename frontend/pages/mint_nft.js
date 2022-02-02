@@ -35,7 +35,7 @@ export default function Mint() {
     const contract_abi = require('../../../abi/abi.json');
     const contract_address = '0xdab6dAC596529D64e015EFb40f51aaf5eF5f38Ee';
     const MintContract = new web3.eth.Contract(contract_abi, contract_address);
-    
+    //パラメータを設定
     const tx = {
       from: this.web3.eth.defaultAccount,
       to: this.contract_address,
