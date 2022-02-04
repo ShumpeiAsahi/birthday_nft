@@ -5,10 +5,8 @@ import { Footer } from '../components/Footer';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Web3 from 'react';
-import Image from 'next/image';
-import ContactPage from './form';
 
-export default function Mint() {
+export default function Check() {
   
   const [wallet,setWalletAddress] = useState(null)
   
@@ -30,25 +28,6 @@ export default function Mint() {
     }
   }
 
-  const mintNFT = async (wallet) => {
-    const Web3 = require('web3');
-    const web3 = new Web3(window.ethereum);
-    await window.ethereum.enable();
-    const contract_abi = require('../../../abi/abi.json');
-    const contract_address = '0xdab6dAC596529D64e015EFb40f51aaf5eF5f38Ee';
-    const MintContract = new web3.eth.Contract(contract_abi, contract_address);
-    //パラメータを設定
-    /*
-    const tx = {
-      from: this.web3.eth.defaultAccount,
-      to: this.contract_address,
-      data:'',
-    };
-    */
-    MintContract.methods.mintBirthCard("0xC81D5a4c75636F05F559a0e7bA4ca643D94858ed","ipfs://QmPpjH7tRQU5gwiu7NJYz862E8cBF4ZhKDWRbiWf4nYmT4").send({from:wallet});
-
-  }
-
 
   return (
     <>
@@ -60,11 +39,8 @@ export default function Mint() {
       </Head>
       <Navbar />
       <main className='flex justify-center p-3'>
-
-        <ContactPage />
-
         <button className="bg-transparent hover:bg-orange-600 text-orange-500 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded" onClick={connectWallet}>
-          NFTを発行する
+          NFTを検索する
         </button>
       </main>
       <Footer />
