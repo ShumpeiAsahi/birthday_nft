@@ -32,6 +32,7 @@ contract BirthdayCard is ERC721URIStorage, Ownable {
         //TokenIdを入れる配列
         uint256[] memory all_token = new uint256[](ownersNfts);
 
+        //all_tokenに入れるtokenId
         uint index_num = 0;
 
         for (uint i = 1; i <= latestId; i++) {
